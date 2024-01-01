@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { UserinfoComponent } from "./userinfo/userinfo.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  template: `
+	selector: "app-root",
+	standalone: true,
+	imports: [UserinfoComponent],
+	template: `
     <section class="menu">🏠 Home</section>
     <section class="main">
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
-        <article class="tile"></article>
+        <article class="tile">
+          <app-userinfo></app-userinfo>
+        </article>
         <article class="tile">
           <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300" />
         </article>
@@ -18,7 +22,7 @@ import { Component } from '@angular/core';
       </section>
     </section>
   `,
-  styles: `
+	styles: `
     :host {
       display: flex;
     }
@@ -57,5 +61,5 @@ import { Component } from '@angular/core';
   `,
 })
 export class AppComponent {
-  title = '03-component-composition';
+	title = "03-component-composition";
 }

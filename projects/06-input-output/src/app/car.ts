@@ -1,8 +1,8 @@
-export interface Car {
-  make: string;
-  model: string;
-  miles: number;
-  price: number;
-  year: number;
-  transmission: 'Automatic' | 'Manual';
-}
+export type Car = {
+	make: string;
+	model: string;
+	miles: number;
+	price: number;
+	year: number;
+	transmission: "Automatic" | "Manual";
+};
